@@ -1,0 +1,8 @@
+tk
+requests
+pyautogui
+psutil
+pandas
+selenium
+webdriver-manager
+pygments
