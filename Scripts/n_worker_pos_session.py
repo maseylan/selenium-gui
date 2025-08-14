@@ -14,11 +14,11 @@ SCRIPT_NAME = "Docker Selenium Stress Test"
 SCRIPT_DESCRIPTION = "Stress Test using Docker"
 is_docker = True
 user_credentials = [
-    {"user": "user1", "passwd": "pass1"},
-    {"user": "user2", "passwd": "pass2"},
-    {"user": "user3", "passwd": "pass3"},
-    {"user": "user4", "passwd": "pass4"},
-    {"user": "user5", "passwd": "pass5"}
+    {"user": "1", "passwd": "pujadewamatahari"},
+    # {"user": "user2", "passwd": "pass2"},
+    # {"user": "user3", "passwd": "pass3"},
+    # {"user": "user4", "passwd": "pass4"},
+    # {"user": "user5", "passwd": "pass5"}
 ]
 
 
@@ -44,6 +44,8 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 #====================ELEMENT==============================
 pos_menu=["//a[contains(text(),'Point of Sale')]","/html/body/div[1]/div[2]/div/a[9]"]
+pos_session=["//button[@name='open_ui' and @class ='btn btn-primary oe_kanban_action oe_kanban_action_button']"]
+
 #====================ELEMENT==============================
 URL = os.getenv("URL_TARGET")
 
@@ -80,10 +82,24 @@ class Script(Startwebdriver):
                         password=self.credentials['passwd'])
         
         self._click_element(pos_menu)
-        
+        self._click_element(pos_session) # Open POS Session
+        self._click_element
+
+        #select employee
+        self._click_element("//button[contains(text(),'Select Cashier')]",
+                            # wait_condition="presence",
+                            timeout=100)        
+        self._click_element(f"/html/body/body/div[1]/div[4]/div/div/div/div[{user_id+1}]",
+                            # wait_condition="presence",
+                            timeout=100)
+
+
+
+
         self.quit_driver()
         logger.info(f"[User {user_id}] Test completed")
 
+    
 
 
 
