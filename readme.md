@@ -1,4 +1,4 @@
-# 🚀 Tilabs Selenium Test Docker GUI
+# 🚀 Selenium GUI
 
 Aplikasi GUI Python modern untuk menjalankan automation Selenium secara paralel, terintegrasi dengan Docker Selenoid, multi-script, dan editor kode Python interaktif. Cocok untuk QA Engineer, developer, maupun pengguna awam yang ingin melakukan pengujian otomatisasi web dengan mudah.
 
