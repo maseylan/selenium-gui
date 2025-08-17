@@ -6,3 +6,4 @@ pandas
 selenium
 webdriver-manager
 pygments
+openpyxl

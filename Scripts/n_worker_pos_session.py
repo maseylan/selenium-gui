@@ -9,6 +9,9 @@ from functools import partial
 import logging
 import sys
 import os
+import selenium.webdriver.support.expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
+import random
 
 SCRIPT_NAME = "Docker Selenium Stress Test"
 SCRIPT_DESCRIPTION = "Stress Test using Docker"
@@ -43,7 +46,9 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__)
 #====================ELEMENT==============================
-pos_menu=["//a[contains(text(),'Point of Sale')]","/html/body/div[1]/div[2]/div/a[9]"]
+pos_menu=[
+    # "//a[contains(text(),'Point of Sale')]",
+          "/html/body/div[1]/div[2]/div/a[9]"]
 pos_session=["//button[@name='open_ui' and @class ='btn btn-primary oe_kanban_action oe_kanban_action_button']"]
 
 #====================ELEMENT==============================
@@ -64,7 +69,8 @@ class Script(Startwebdriver):
 
     def run_logic(self, user_id):
         """Simulated test steps — expand with your actual logic."""
-        
+        start_time = time.time()
+
         self.get_url(self.credentials['url'])
         logger.info(f"[User {user_id}] Opened {self.credentials['url']}")
         
@@ -75,7 +81,7 @@ class Script(Startwebdriver):
             time.sleep(self.wait_time)
         
         #Get DB (DEV ONLY)
-        self.db_select("STRTEST")
+        # self.db_select("STRTEST")
         
         #Login Page
         self.login_page(user=self.credentials['user'],
@@ -83,20 +89,73 @@ class Script(Startwebdriver):
         
         self._click_element(pos_menu)
         self._click_element(pos_session) # Open POS Session
-        self._click_element
-
         #select employee
         self._click_element("//button[contains(text(),'Select Cashier')]",
                             # wait_condition="presence",
                             timeout=100)        
-        self._click_element(f"/html/body/body/div[1]/div[4]/div/div/div/div[{user_id+1}]",
+        self._click_element(f"/html/body/body/div[1]/div[4]/div/div/div/div[{user_id+2}]",
                             # wait_condition="presence",
                             timeout=100)
+        # time.sleep()
+        open_session_control = EC.visibility_of_element_located((By.CSS_SELECTOR, "body > div.pos > div.popups > div > div"))
+        try :
+            cahs_control = WebDriverWait(self.driver, timeout=5).until(open_session_control)
+        except Exception :
+            cahs_control = None
+            pass 
+        
+        if cahs_control and cahs_control.is_displayed():
+            logger.info(f"[User {user_id}] Opening Cash Control, ")
+            self._click_element("/html/body/body/div[1]/div[4]/div/div/footer/div")
+        else:
+            logger.error(f"[User {user_id}] No Cash Control Displayed, Already Opened")
+            
+        while True:
+            try :
+                #Table
+                self._click_element(f"/html/body/body/div[1]/div[3]/div[1]/div/div/div/div/div/div/div/div[{user_id+1}]",
+                                    timeout=10) 
+                
+                #Modal Customer Name
+                self._insert_text("/html/body/body/div[1]/div[4]/div/div/div/textarea",
+                                ''.join(random.choice(string.ascii_letters) for _ in range(10)))
+                self._click_element("/html/body/body/div[1]/div[4]/div[3]/div/footer/div[1]",) # Submit Modal Guest Name
 
+                #Select Order Type
+                assert self.driver.find_element(By.CSS_SELECTOR, "body > div.pos > div.popups > div:nth-child(2) > div > header").is_displayed()
+                self._click_element("body > div.pos > div.popups > div:nth-child(2) > div > div > div")
 
+                # Submit modal guest total
+                self._click_element(["/html/body/body/div[1]/div[4]/div/div/footer/div[2]","body > div.pos > div.popups > div > div > footer > div.button.confirm.highlight"]) 
 
+                elements = "//article[@class='product']"
+                products = self.driver.find_elements(By.XPATH, elements)
+                
+                many_click = random.randint(1, 50)
+                for _ in range(many_click):
+                    self._click_element(elements+f"[{random.randint(1, len(products))}]")
+                
 
+                self._click_element("//button[contains(text(),'Save Order')]") # Click Save Order Button
+                self._click_element(f"/html/body/body/div[1]/div[3]/div[1]/div/div/div/div/div/div/div/div[{user_id+1}]",
+                                    timeout=10) # Meja
+                self._click_element("//button[contains(text(),'Payment')]","//button[@class='button pay validation']")
+                # payment_meth list
+                elem_pm = "//div[@class='button paymentmethod']"
+                payment_method = self.driver.find_elements(By.XPATH, "//div[@class='button paymentmethod']")
+                self._click_element(elem_pm+f"[{random.randint(1, len(payment_method))}]") # Random Payment Method
+                self._click_element("/html/body/body/div[1]/div[3]/div[1]/div/div/div/div/div/div[2]/div[1]/div[2]","body > div.pos > div.pos-content > div.window > div > div > div > div > div > div.main-content > div.left-content > div.button.next.validation.highlight")
+
+                self._click_element("/html/body/body/div[1]/div[3]/div[1]/div/div/div/div/div/div[3]") # New  Order
+            except Exception as e:
+                logger.error(f"[User {user_id}] Error during order processing: {str(e)}")
+                break   
+
+        
+        elapsed_time = time.time() - start_time
+        time.sleep(300)
         self.quit_driver()
+        logger.info(elapsed_time)
         logger.info(f"[User {user_id}] Test completed")
 
     

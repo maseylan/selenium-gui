@@ -96,11 +96,11 @@ class Startwebdriver():
         # chrome_options.add_argument('--use-fake-ui-for-media-stream')
         # chrome_options.add_argument('--use-fake-device-for-media-stream')
         # chrome_options.add_argument("--headless")
-        # chrome_options.add_argument("--disable-gpu")
+        chrome_options.add_argument("--disable-gpu")
         # chrome_options.add_argument("--no-sandbox")
-        # chrome_options.add_argument("--disable-dev-shm-usage")
+        chrome_options.add_argument("--disable-dev-shm-usage")
         # chrome_options.add_extension(self.extension_path)
-        # chrome_options.add_argument("--start-maximized")
+        chrome_options.add_argument("--start-maximized")
         # chrome_options.add_argument(
             # "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36")
 
@@ -119,7 +119,8 @@ class Startwebdriver():
             chrome_options.set_capability("browserVersion","127.0")
             chrome_options.set_capability("selenoid:options", {
                 "enableVNC": True,
-                "enableVideo": True
+                "enableVideo": True,
+                "sessionTimeout": "15m"
             })
             Remote_driver = os.getenv("SELENOID_URL", "http://localhost:4444/wd/hub")
             self.driver = webdriver.Remote(
@@ -441,7 +442,7 @@ class Startwebdriver():
         timeout = timeout or self.default_timeout
         attempt_max = kwargs.get('attempt_max', 2)
         log_clicks = kwargs.get('log_clicks', True)
-        scroll_into_view = kwargs.get('scroll_into_view', False)
+        scroll_into_view = kwargs.get('scroll_into_view', True)
         use_action_chains = kwargs.get('use_action_chains', True)
         wait_condition = kwargs.get('wait_condition', 'visibility')
 
