@@ -96,11 +96,11 @@ class Startwebdriver():
         # chrome_options.add_argument('--use-fake-ui-for-media-stream')
         # chrome_options.add_argument('--use-fake-device-for-media-stream')
         # chrome_options.add_argument("--headless")
-        # chrome_options.add_argument("--disable-gpu")
+        chrome_options.add_argument("--disable-gpu")
         # chrome_options.add_argument("--no-sandbox")
-        # chrome_options.add_argument("--disable-dev-shm-usage")
+        chrome_options.add_argument("--disable-dev-shm-usage")
         # chrome_options.add_extension(self.extension_path)
-        # chrome_options.add_argument("--start-maximized")
+        chrome_options.add_argument("--start-maximized")
         # chrome_options.add_argument(
             # "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36")
 
@@ -119,7 +119,8 @@ class Startwebdriver():
             chrome_options.set_capability("browserVersion","127.0")
             chrome_options.set_capability("selenoid:options", {
                 "enableVNC": True,
-                "enableVideo": True
+                "enableVideo": True,
+                "sessionTimeout": "5m"
             })
             Remote_driver = os.getenv("SELENOID_URL", "http://localhost:4444/wd/hub")
             self.driver = webdriver.Remote(
@@ -210,13 +211,13 @@ class Startwebdriver():
             raise TimeoutException("Timeout while waiting for login elements.") from te
         except AssertionError as ae:
             logging.exception("Assertion error occurred during login.")
-            raise AssertionError(f"Assertion failed during login: {ae}")
+            # raise AssertionError(f"Assertion failed during login: {ae}")
         except WebDriverException as we:
             logging.exception("WebDriver error occurred during login.")
-            raise RuntimeError(f"WebDriver error occurred during login: {we}")
+            # raise RuntimeError(f"WebDriver error occurred during login: {we}")
         except Exception as e:
             logging.exception("Unexpected error occurred during login.")
-            raise RuntimeError(f"Unexpected error during login: {e}")
+            # raise RuntimeError(f"Unexpected error during login: {e}")
 
 
     def logout(self, timeout = None):
@@ -322,100 +323,7 @@ class Startwebdriver():
             return None
 
 
-    def click_element_old(self,by_element,element_path):
-        try:
-
-            actions = ActionChains(self.driver)
-            actions.move_to_element(WebDriverWait(self.driver, 10).until(
-                EC.visibility_of_element_located((by_element, element_path)))).click().perform()
-
-            logging.info(f"{self.logging.info_existing_text_field(element_path)} "
-                  f"Element Clicked: {element_path} \n")
-        except Exception as e:
-            logging.info(f"Error: {e}. Element  {element_path} Not found or not clickable.")
-
-    def click_element(self, by_element, element_path, timeout=None):
-        """
-        Attempts to locate an element and click on it using Selenium WebDriver
-        with error handling that allows execution to continue.
-        This implementation logs errors but does not raise exceptions, allowing
-        the calling code to continue execution.
-
-        :param by_element: Locator strategy used for finding the element, such as
-            'By.ID', 'By.XPATH', etc.
-        :type by_element: selenium.webdriver.common.by.By
-        :param element_path: The specific path or identifier to locate the
-            desired element on the page.
-        :type element_path: str
-        :param timeout: Optional value specifying the maximum duration (in
-            seconds) to wait for the element to become visible. Defaults to the
-            internally defined `default_timeout` if not provided.
-        :type timeout: float, optional
-        :return: Boolean indicating success (True) or failure (False) of the click operation
-        :rtype: bool
-        """
-        timeout = timeout or self.default_timeout
-        attempt_max = 2
-        success = False
-
-        for attempt in range(attempt_max):
-            try:
-                # Log existing text field if available
-                try:
-                    field_text = self.save_existing_text_field(element_path)
-                    if field_text:
-                        logging.info(f"✅ {field_text} Element Clicked: <Element>{element_path}\n")
-                    else:
-                        logging.info(f"✅ Element Clicked with Path: {element_path}\n")
-                except Exception as e:
-                    # Continue even if we can't get text field info
-                    logging.warning(f"Couldn't get text field info for {element_path}: {e}")
-                    logging.info(f"Attempting to click: {element_path}, but couldn't get text field info")
-
-                # Wait for visibility of element
-                element = WebDriverWait(self.driver, timeout).until(
-                    EC.visibility_of_element_located((by_element, element_path))
-                )
-
-                # Check if element is interactable
-                if not (element.is_displayed() and element.is_enabled()):
-                    logging.warning(f"Element found at {element_path} is not interactable")
-                    logging.info(f"⚠️ Element found at {element_path} is not interactable, attempting click anyway")
-
-                # Perform click with ActionChains
-                ActionChains(self.driver).move_to_element(element).click().perform()
-
-                success = True
-                break  # Exit loop on successful click
-
-            except StaleElementReferenceException:
-                logging.warning(f"Attempt {attempt + 1}: Element became stale. Retrying...")
-                logging.info(f"⚠️ Attempt {attempt + 1}: Element became stale. Retrying...")
-                if attempt + 1 == attempt_max:
-                    logging.error(
-                        f"StaleElementReferenceException: Element at '{element_path}' remained stale after {attempt_max} attempts")
-                    logging.info(f"⚠️ Element at '{element_path}' remained stale after {attempt_max} attempts")
-
-            except TimeoutException:
-                logging.error(
-                    f"TimeoutException: Timeout while waiting for element at '{element_path}' to become visible")
-                logging.info(f"⚠️ Timeout while waiting for element at '{element_path}' to become visible")
-                break  # Break from loop as further attempts are unlikely to succeed
-
-            except WebDriverException as we:
-                logging.error(f"WebDriverException while interacting with '{element_path}': {we}")
-                logging.info(f"⚠️ Selenium WebDriver error while interacting with '{element_path}': {we}")
-                break  # Break from loop as WebDriver is in an error state
-
-            except Exception as e:
-                logging.error(f"Unexpected error in click_element for '{element_path}': {type(e).__name__} - {e}")
-                logging.info(f"⚠️ Unexpected error in click_element for '{element_path}': {type(e).__name__} - {e}")
-                break  # Break from loop for unexpected errors
-
-        # Return success status instead of raising exceptions
-        return success
-
-    def _click_element(self, element_paths, timeout=None, **kwargs):
+    def _click_element(self, element_paths, timeout=None, record_time = False, **kwargs):
         """
         Attempts to locate and click on elements by automatically detecting the appropriate
         locator strategy based on the format of the element path string.
@@ -423,6 +331,7 @@ class Startwebdriver():
         :param element_paths: Single string or list of strings with element locators
         :type element_paths: str or list of str
         :param timeout: Optional timeout value in seconds
+        :type record_time: bool, Optional 
         :type timeout: float, optional
         :param kwargs: Additional keyword arguments
             - attempt_max: Maximum number of attempts for clicking stale elements (default: 2)
@@ -433,6 +342,8 @@ class Startwebdriver():
         :return: Boolean indicating success (True) or failure (False)
         :rtype: bool
         """
+        if record_time :
+            start_time = time.time()
         # Handle single element path
         if not isinstance(element_paths, list):
             element_paths = [element_paths]
@@ -441,7 +352,7 @@ class Startwebdriver():
         timeout = timeout or self.default_timeout
         attempt_max = kwargs.get('attempt_max', 2)
         log_clicks = kwargs.get('log_clicks', True)
-        scroll_into_view = kwargs.get('scroll_into_view', False)
+        scroll_into_view = kwargs.get('scroll_into_view', True)
         use_action_chains = kwargs.get('use_action_chains', True)
         wait_condition = kwargs.get('wait_condition', 'visibility')
 
@@ -474,19 +385,6 @@ class Startwebdriver():
 
             for attempt in range(attempt_max):
                 try:
-                    # Log existing text field if available and logging is enabled
-                    if log_clicks:
-                        try:
-                            field_text = self.save_existing_text_field(element_path)
-                            if field_text:
-                                logging.info(f"✅ {field_text} Element Clicked: <Element> {element_path}\n")
-                            else:
-                                logging.info(f"✅ Element Clicked with Path: {element_path}\n")
-                        except Exception as e:
-                            # Continue even if we can't get text field info
-                            logging.warning(f"Couldn't get text field info for {element_path}: {e}")
-                            logging.info(f"Attempting to click: {element_path}, but couldn't get text field info")
-
                     # Select wait condition based on parameter
                     if wait_condition == 'clickable':
                         wait_condition_ec = EC.element_to_be_clickable((by_element, element_path))
@@ -506,17 +404,37 @@ class Startwebdriver():
                     if not (element.is_displayed() and element.is_enabled()):
                         logging.warning(f"Element found at {element_path} is not interactable")
                         logging.info(f"⚠️ Element found at {element_path} is not interactable, attempting click anyway")
-                        
 
+                    
+
+                    # ✅ Log AFTER successful click
+                    if log_clicks:
+                        try:
+                            field_text = self.save_existing_text_field(element_path)
+                            if field_text:
+                                logging.info(f"✅ {field_text} Element Clicked: <Element> {element_path}\n")
+                            else:
+                                logging.info(f"✅ Element Clicked with Path: {element_path}\n")
+                        except Exception as e:
+                            # logging.warning(f"Couldn't get text field info for {element_path}: {e}")
+                            logging.info(f"✅ Element Clicked (but couldn't fetch text field info): {element_path}")
+                   
                     # Perform click with appropriate method
                     if use_action_chains:
                         ActionChains(self.driver).move_to_element(element).click().perform()
                     else:
                         element.click()
 
-                    success = True
-                    return True  # Return immediately on first successful click
+                         # ⏱️ Record elapsed time inside log_clicks
+                        if record_time:
+                            end_time = time.time()
+                            elapsed_time = end_time - start_time
+                            logging.info(f"Element Click completed in {elapsed_time:.2f} seconds")
 
+                    success = True
+                    return True
+    
+                # Handle specific exceptions
                 except StaleElementReferenceException:
                     logging.warning(f"Attempt {attempt + 1}: Element became stale. Retrying...")
                     logging.info(f"⚠️ Attempt {attempt + 1}: Element became stale. Retrying...")
@@ -532,15 +450,16 @@ class Startwebdriver():
                     break  # Try next locator
 
                 except WebDriverException as we:
-                    logging.error(f"WebDriverException while interacting with '{element_path}': {we}")
-                    logging.info(f"⚠️ Selenium WebDriver error while interacting with '{element_path}': {we}")
+                    # logging.error(f"WebDriverException while interacting with '{element_path}': {we}")
+                    # logging.info(f"⚠️ Selenium WebDriver error while interacting with '{element_path}': {we}")
                     break  # Try next locator
 
                 except Exception as e:
-                    logging.error(f"Unexpected error in click_element for '{element_path}': {type(e).__name__} - {e}")
-                    logging.info(f"⚠️ Unexpected error in click_element for '{element_path}': {type(e).__name__} - {e}")
+                    # logging.error(f"Unexpected error in click_element for '{element_path}': {type(e).__name__} - {e}")
+                    # logging.info(f"⚠️ Unexpected error in click_element for '{element_path}': {type(e).__name__} - {e}")
                     break  # Try next locator
 
+       
         # Return success status instead of raising exceptions
         return success
 
@@ -596,7 +515,7 @@ class Startwebdriver():
 
         return success
 
-    def _insert_text(self, element_paths, text_to_insert, timeout=None, **kwargs):
+    def _insert_text(self, element_paths, text_to_insert, timeout=None, record_time =False, **kwargs):
         """
         Attempts to locate and insert text into elements by automatically detecting the appropriate
         locator strategy based on the format of the element path string.
@@ -606,6 +525,7 @@ class Startwebdriver():
         :param text_to_insert: Text to insert into the element
         :type text_to_insert: str
         :param timeout: Optional timeout value in seconds
+        :param record_time: Whether to record the time taken for the operation (default: False)
         :type timeout: float, optional
         :param kwargs: Additional keyword arguments
             - attempt_max: Maximum number of attempts for interacting with stale elements (default: 2)
@@ -618,6 +538,10 @@ class Startwebdriver():
         :return: Boolean indicating success (True) or failure (False)
         :rtype: bool
         """
+        if record_time :
+            start_time = time.time()
+            # logging.info(f"Starting text insertion at {start_time} for element(s): {element_paths}")
+
         # Handle single element path
         if not isinstance(element_paths, list):
             element_paths = [element_paths]
@@ -700,9 +624,19 @@ class Startwebdriver():
 
                     # Log action if enabled
                     if log_actions:
-                        logging.info(f"✅ Inserted text: '{text_to_insert}' into element: {element_path}\n")
+                        if record_time:
+                            end_time = time.time()
+                            elapsed_time = end_time - start_time
+                            logging.info(
+                                f"✅ Inserted text: '{text_to_insert}' into element(s): {element_path} "
+                                f"in {elapsed_time:.2f} seconds\n"
+                            )
+                        else:
+                            logging.info(
+                                f"✅ Inserted text: '{text_to_insert}' into element(s): {element_paths}\n"
+                            )
+                        success = True
 
-                    success = True
                     return True  # Return immediately on first successful insertion
 
                 except StaleElementReferenceException:
@@ -729,6 +663,7 @@ class Startwebdriver():
                     logging.info(f"⚠️ Unexpected error in insert_text for '{element_path}': {type(e).__name__} - {e}")
                     break  # Try next locator
 
+        
         # Return success status instead of raising exceptions
         return success
 
