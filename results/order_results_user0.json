@@ -1,0 +1,814 @@
+[
+    {
+        "user_id": 0,
+        "order_no": 1,
+        "elapsed_order_time": 19.514468669891357,
+        "products": [
+            "SX MINI T CLASS",
+            "ORION II BY LVE Color: Sonokeling Gold"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 2,
+        "elapsed_order_time": 23.028282642364502,
+        "products": [
+            "ORION II BY LVE Color: Forged Carbon",
+            "AEGIS LEGEND MOD 200W",
+            "CENTAURUS M200 MOD Color: Golden knight"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 3,
+        "elapsed_order_time": 19.846633195877075,
+        "products": [
+            "01 OXVA NEXLIM POD KIT Color: Dark Grey",
+            "DOTMOD DOTBOX 220W Color: Red",
+            "ALEXA BOXMOD 200W Color: Red Devil"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 4,
+        "elapsed_order_time": 19.654197692871094,
+        "products": [
+            "LIQUID PARADEWA STRAWBERRY PODS FRIENDLY 30ML F",
+            "ARGUS MT MOD",
+            "AEGIS X MOD 200W Color: Classic Silver"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 5,
+        "elapsed_order_time": 16.94202733039856,
+        "products": [
+            "ARGUS GT II MOD Color: Carbon Fiber",
+            "AEGIS X MOD 200W Color: Gunmetal Camo"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 6,
+        "elapsed_order_time": 17.495768785476685,
+        "products": [
+            "CENTAURUS M200 MOD Color: Midnight Club",
+            "CENTAURUS M200 MOD Color: Golden knight",
+            "AEGIS X MOD 200W Color: Classic Silver"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 7,
+        "elapsed_order_time": 17.871424913406372,
+        "products": [
+            "HEXOHM V3.0 ANODIZED Color: Blue",
+            "SALAH TRML T99 MOD ONLY Color: Pink Bubblegum"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 8,
+        "elapsed_order_time": 21.83725666999817,
+        "products": [
+            "GEEKVAPE T200 KIT Color: Azure Blue",
+            "CARTRIDGE NEXLIM POD KIT Resistance: 0.8 Ohm",
+            "DRAG 4 KIT Color: Pale Gold Walnut",
+            "AEGIS X MOD 200W Color: Red Black",
+            "CARTRIDGE NEXLIM POD KIT Resistance: 0.8 Ohm"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 9,
+        "elapsed_order_time": 16.938460111618042,
+        "products": [
+            "HEXOHM V3.0 O-FRAME Color: Red"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 10,
+        "elapsed_order_time": 19.10207486152649,
+        "products": [
+            "CARTRIDGE NEXLIM POD KIT Resistance: 1.2 Ohm",
+            "01 OXVA NEXLIM POD KIT Color: Rose Gold"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 11,
+        "elapsed_order_time": 19.33841347694397,
+        "products": [
+            "AEGIS X MOD 200W Color: Signature Orange",
+            "DRAG 4 KIT Color: Pale Gold Walnut"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 12,
+        "elapsed_order_time": 16.639286279678345,
+        "products": [
+            "SX MINI T CLASS"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 13,
+        "elapsed_order_time": 24.79280161857605,
+        "products": [
+            "CARTRIDGE NEXLIM POD KIT Resistance: 0.6 Ohm",
+            "CENTAURUS M200 MOD Color: Golden knight",
+            "AEGIS X MOD 200W Color: Rainbow Black",
+            "AEGIS LEGEND MOD 200W",
+            "DOTMOD DOTBOX 220W Color: Red"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 14,
+        "elapsed_order_time": 24.61717176437378,
+        "products": [
+            "DRAG 4 MOD Color: Black Walnut",
+            "SALAH TRML T99 MOD ONLY Color: Grasberg Mine",
+            "DRAG 4 MOD Color: Gunmetal Forest Green",
+            "CENTAURUS M200 MOD Color: Galaxy Black"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 15,
+        "elapsed_order_time": 22.684446096420288,
+        "products": [
+            "ORION II BY LVE Color: Purple Heart Silver",
+            "B'00ADAPT PRO",
+            "01 OXVA NEXLIM POD KIT Color: STARRY BLUE"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 16,
+        "elapsed_order_time": 43.67664194107056,
+        "products": [
+            "B'00ADAPT PRO",
+            "SALAH TRML T99 MOD ONLY Color: Pink Bubblegum",
+            "ALEXA BOXMOD 200W Color: Blue Cyclops",
+            "ORION II BY LVE Color: Purple Heart Silver",
+            "VAPX METEOR 510 BOX MOD 80W Color: Charcoal Black"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 17,
+        "elapsed_order_time": 29.134241342544556,
+        "products": [
+            "CENTAURUS M200 MOD Color: Man Of Steel",
+            "CENTAURUS M200 MOD Color: Midnight Club",
+            "AREZ MOD 120W Color: Matte Black",
+            "ALEXA BOXMOD 200W Color: Charcoal Black",
+            "CARTRIDGE NEXLIM POD KIT Resistance: 1.2 Ohm"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 18,
+        "elapsed_order_time": 20.688182592391968,
+        "products": [
+            "01 OXVA NEXLIM POD KIT Color: Rose Gold",
+            "DOTMOD DOTBOX 220W Color: Orange",
+            "AEGIS X MOD 200W Color: Gunmetal Camo",
+            "ORION II BY LVE Color: Sonokeling Gold"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 19,
+        "elapsed_order_time": 23.303513526916504,
+        "products": [
+            "01 OXVA NEXLIM POD KIT Color: PEARL PINK",
+            "ORION II BY LVE Color: Textured Carbon Silver",
+            "AEGIS X MOD 200W Color: Stealth Black",
+            "01 OXVA NEXLIM POD KIT Color: Dark Grey",
+            "DRAG 4 MOD Color: Gunmetal Ocean Blue"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 20,
+        "elapsed_order_time": 19.716830730438232,
+        "products": [
+            "01 OXVA NEXLIM POD KIT Color: Power Black",
+            "HEXOHM V3.0 POWDER COAT Color: Black"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 21,
+        "elapsed_order_time": 21.473889350891113,
+        "products": [
+            "ORION II BY LVE Color: Textured Carbon Black"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 22,
+        "elapsed_order_time": 25.640392065048218,
+        "products": [
+            "DRAG 4 MOD Color: Gunmetal Tropical Orange",
+            "01 OXVA NEXLIM POD KIT Color: Glory Red",
+            "AEGIS X MOD 200W Color: Gunmetal Camo",
+            "CENTAURUS Q200 KIT"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 23,
+        "elapsed_order_time": 21.179948329925537,
+        "products": [
+            "AEGIS X MOD 200W Color: Signature Orange",
+            "SALAH TRML T99 MOD ONLY Color: Black Panther",
+            "DRAG 4 KIT Color: Gunmetal Tropical Orange",
+            "AEGIS X MOD 200W Color: Red Black",
+            "SALAH TRML T99 MOD ONLY Color: Pink Bubblegum"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 24,
+        "elapsed_order_time": 14.408743381500244,
+        "products": [
+            "01 OXVA NEXLIM POD KIT Color: Dark Grey"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 25,
+        "elapsed_order_time": 14.117506504058838,
+        "products": [
+            "CARTRIDGE NEXLIM POD KIT Resistance: 1.2 Ohm"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 26,
+        "elapsed_order_time": 21.428027391433716,
+        "products": [
+            "VAPX METEOR 510 BOX MOD 80W Color: Volcano Red",
+            "01 OXVA NEXLIM POD KIT Color: Black Gold",
+            "01 OXVA NEXLIM POD KIT Color: Coral Orange",
+            "ORION II BY LVE Color: Textured Carbon Silver",
+            "VAPX METEOR 510 BOX MOD 80W Color: Volcano Red"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 27,
+        "elapsed_order_time": 17.798439264297485,
+        "products": [
+            "DOTMOD DOTBOX 220W Color: Blue",
+            "CENTAURUS Q200 KIT",
+            "DRAG 4 MOD Color: Gunmetal Tropical Orange"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 28,
+        "elapsed_order_time": 15.060265302658081,
+        "products": [
+            "ALEXA BOXMOD 200W Color: Red Devil",
+            "CENTAURUS Q200 KIT"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 29,
+        "elapsed_order_time": 16.664555549621582,
+        "products": [
+            "HEXOHM V3.0 POWDER COAT Color: Black",
+            "CENTAURUS M200 MOD Color: Golden knight",
+            "B'00ADAPT PRO"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 30,
+        "elapsed_order_time": 19.767388582229614,
+        "products": [
+            "01 OXVA NEXLIM POD KIT Color: Dark Grey",
+            "SALAH TRML T99 MOD ONLY Color: Black Panther",
+            "DRAG 4 MOD Color: Gunmetal Rosewood",
+            "AREZ MOD 120W Color: Gunmetal",
+            "CENTAURUS Q200 MOD"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 31,
+        "elapsed_order_time": 13.99739408493042,
+        "products": [
+            "AEGIS X MOD 200W Color: Classic Silver"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 32,
+        "elapsed_order_time": 16.624900579452515,
+        "products": [
+            "VAPX METEOR 510 BOX MOD 80W Color: Volcano Red",
+            "ALEXA BOXMOD 200W Color: Red Devil"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 33,
+        "elapsed_order_time": 15.581389904022217,
+        "products": [
+            "ALEXA BOXMOD 200W Color: Red Devil",
+            "GEEKVAPE T200 KIT Color: Azure Blue"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 34,
+        "elapsed_order_time": 17.17889165878296,
+        "products": [
+            "ALEXA BOXMOD 200W Color: Charcoal Black",
+            "VAPX METEOR 510 BOX MOD 80W Color: Charcoal Black",
+            "ARGUS MT MOD"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 35,
+        "elapsed_order_time": 21.388224124908447,
+        "products": [
+            "01 OXVA NEXLIM POD KIT Color: PEARL PINK",
+            "HOTCIG RST 212W",
+            "CENTAURUS M200 MOD Color: Man Of Steel",
+            "GEEKVAPE T200 KIT Color: Black",
+            "LIQUID PARADEWA STRAWBERRY PODS FRIENDLY 30ML F"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 36,
+        "elapsed_order_time": 16.136237382888794,
+        "products": [
+            "AEGIS X MOD 200W Color: Stealth Black",
+            "ORION II BY LVE Color: Purple Heart Black"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 37,
+        "elapsed_order_time": 16.861571311950684,
+        "products": [
+            "01 OXVA NEXLIM POD KIT Color: Black Warrior",
+            "ALEXA BOXMOD 200W Color: Blue Cyclops"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 38,
+        "elapsed_order_time": 18.153404474258423,
+        "products": [
+            "HEXOHM V3.0 O-FRAME Color: Plum Vapezoo",
+            "ORION II BY LVE Color: Forged Carbon",
+            "AEGIS X MOD 200W Color: Gold Black",
+            "ALEXA BOXMOD 200W Color: Red Devil"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 39,
+        "elapsed_order_time": 19.708707571029663,
+        "products": [
+            "01 OXVA NEXLIM POD KIT Color: Black Gold",
+            "ORION II BY LVE Color: Textured Carbon Silver",
+            "CARTRIDGE NEXLIM POD KIT Resistance: 0.8 Ohm",
+            "ORION II BY LVE Color: Textured Carbon Silver",
+            "HOTCIG RST 212W"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 40,
+        "elapsed_order_time": 16.420461893081665,
+        "products": [
+            "DOVPO MVV II SE",
+            "AEGIS X MOD 200W Color: Gunmetal Camo"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 41,
+        "elapsed_order_time": 72.8578507900238,
+        "products": [
+            "AEGIS X MOD 200W Color: Gunmetal Camo",
+            "ORION II BY LVE Color: Textured Carbon Silver",
+            "01 OXVA NEXLIM POD KIT Color: Dark Grey"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 1,
+        "elapsed_order_time": 23.968689680099487,
+        "products": [
+            "DOTMOD DOTBOX 220W Color: Blue",
+            "ORION II BY LVE Color: Sonokeling Gold",
+            "DRAG 4 KIT Color: Gunmetal Tropical Orange"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 2,
+        "elapsed_order_time": 16.064582109451294,
+        "products": [
+            "B'00ADAPT PRO"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 3,
+        "elapsed_order_time": 18.31716823577881,
+        "products": [
+            "ALEXA BOXMOD 200W Color: Iron Metal / Grey",
+            "DRAG 4 MOD Color: Gunmetal Ocean Blue",
+            "HEXOHM V3.0 ANODIZED Color: Plum"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 4,
+        "elapsed_order_time": 18.707490921020508,
+        "products": [
+            "01 OXVA NEXLIM POD KIT Color: Glory Red",
+            "GEEKVAPE T200 MOD"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 5,
+        "elapsed_order_time": 25.834672689437866,
+        "products": [
+            "01 OXVA NEXLIM POD KIT Color: Rose Gold",
+            "ORION II BY LVE Color: Forged Carbon",
+            "ORION II BY LVE Color: Sonokeling Silver",
+            "01 OXVA NEXLIM POD KIT Color: DARK BLUE",
+            "SALAH TRML T99 MOD ONLY Color: Creme Brulle"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 6,
+        "elapsed_order_time": 18.85828423500061,
+        "products": [
+            "01 OXVA NEXLIM POD KIT Color: Dark Grey",
+            "ARGUS GT II MOD Color: Carbon Fiber",
+            "AEGIS X MOD 200W Color: Gold Black"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 7,
+        "elapsed_order_time": 25.36268901824951,
+        "products": [
+            "SALAH TRML T99 MOD ONLY Color: Grasberg Mine",
+            "ALEXA BOXMOD 200W Color: Charcoal Black",
+            "HEXOHM V3.0 ANODIZED Color: Red",
+            "SALAH TRML T99 MOD ONLY Color: Iron Gray"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 8,
+        "elapsed_order_time": 22.987921476364136,
+        "products": [
+            "ARGUS MT MOD",
+            "Lunar Ice Cream 60ML F Nicotine: 3MG",
+            "GEEKVAPE T200 KIT Color: Black",
+            "DRAG 4 KIT Color: Gunmetal Tropical Orange",
+            "ARGUS GT II MOD Color: Carbon Fiber"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 9,
+        "elapsed_order_time": 19.032923221588135,
+        "products": [
+            "HEXOHM V3.0 ANODIZED Color: Green"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 10,
+        "elapsed_order_time": 25.7579824924469,
+        "products": [
+            "ORION II BY LVE Color: Sonokeling Silver",
+            "GEEKVAPE T200 KIT Color: Black",
+            "AEGIS X MOD 200W Color: Gold Black",
+            "HEXOHM V3.0 ANODIZED Color: Black"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 11,
+        "elapsed_order_time": 37.4842414855957,
+        "products": [
+            "01 OXVA NEXLIM POD KIT Color: Rose Gold"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 12,
+        "elapsed_order_time": 33.94893789291382,
+        "products": [
+            "SALAH TRML T99 MOD ONLY Color: Pink Bubblegum",
+            "01 OXVA NEXLIM POD KIT Color: Glory Red",
+            "GEEKVAPE T200 KIT Color: Black"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 13,
+        "elapsed_order_time": 29.58103370666504,
+        "products": [
+            "DRAG 4 KIT Color: Gunmetal Tropical Orange",
+            "ALEXA BOXMOD 200W Color: Red Devil",
+            "AREZ MOD 120W Color: Gunmetal"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 14,
+        "elapsed_order_time": 29.699060678482056,
+        "products": [
+            "HEXOHM V3.0 O-FRAME Color: Red",
+            "ARGUS GT II MOD Color: Carbon Fiber",
+            "01 OXVA NEXLIM POD KIT Color: Pine Green",
+            "SX MINI T CLASS"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 15,
+        "elapsed_order_time": 20.857709407806396,
+        "products": [
+            "01 OXVA NEXLIM POD KIT Color: Black Warrior",
+            "AREZ MOD 120W Color: Matte Black",
+            "DOTMOD DOTBOX 220W Color: Blue",
+            "ORION II BY LVE Color: Sonokeling Silver"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 16,
+        "elapsed_order_time": 21.783538818359375,
+        "products": [
+            "AEGIS X MOD 200W Color: Rainbow Black",
+            "AEGIS X MOD 200W Color: Gold Black",
+            "VCT SALTNIC 15ML Nicotine: 30MG",
+            "CENTAURUS Q200 MOD",
+            "VAPX METEOR 510 BOX MOD 80W Color: Stardust Grey"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 17,
+        "elapsed_order_time": 23.544744968414307,
+        "products": [
+            "01 OXVA NEXLIM POD KIT Color: PEARL PINK",
+            "HOTCIG RST 212W",
+            "NYC V1 60ML NEW YORK PERFECT CHEESE Nicotine: 6MG",
+            "VAPX METEOR 510 BOX MOD 80W Color: Charcoal Black",
+            "AEGIS X MOD 200W Color: Signature Orange"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 18,
+        "elapsed_order_time": 20.218993186950684,
+        "products": [
+            "DOTMOD DOTBOX 220W Color: Orange",
+            "AEGIS X MOD 200W Color: Gunmetal Camo",
+            "ALEXA BOXMOD 200W Color: Iron Metal / Grey",
+            "GEEKVAPE T200 KIT Color: Azure Blue"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 19,
+        "elapsed_order_time": 21.201391458511353,
+        "products": [
+            "DOTMOD DOTBOX 220W Color: Red",
+            "SALAH TRML T99 MOD ONLY Color: Creme Brulle",
+            "SALAH TRML T99 MOD ONLY Color: Black Panther",
+            "CARTRIDGE NEXLIM POD KIT Resistance: 0.6 Ohm",
+            "CENTAURUS Q200 KIT"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 20,
+        "elapsed_order_time": 18.930994749069214,
+        "products": [
+            "SALAH TRML T99 MOD ONLY Color: Black Panther",
+            "CARTRIDGE NEXLIM POD KIT Resistance: 0.6 Ohm",
+            "ARGUS MT MOD"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 21,
+        "elapsed_order_time": 34.393450021743774,
+        "products": [
+            "B'00ADAPT PRO",
+            "ALEXA BOXMOD 200W Color: Charcoal Black",
+            "AEGIS X MOD 200W Color: Gold Black",
+            "ORION II BY LVE Color: Textured Carbon Black",
+            "DRAG 4 MOD Color: Gunmetal Tropical Orange"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 22,
+        "elapsed_order_time": 20.353413820266724,
+        "products": [
+            "NYC V1 60ML NEW YORK PERFECT CHEESE Nicotine: 3MG",
+            "DRAG 4 MOD Color: Pale Gold Walnut"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 23,
+        "elapsed_order_time": 27.877822399139404,
+        "products": [
+            "ALEXA BOXMOD 200W Color: Red Devil",
+            "HOTCIG RST 212W"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 24,
+        "elapsed_order_time": 28.516720056533813,
+        "products": [
+            "HEXOHM V3.0 ANODIZED Color: Plum",
+            "AEGIS X MOD 200W Color: Green Black",
+            "CARTRIDGE NEXLIM POD KIT Resistance: 0.8 Ohm",
+            "DRAG 4 KIT Color: Pale Gold Walnut",
+            "DRAG 4 KIT Color: Pale Gold Walnut"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 25,
+        "elapsed_order_time": 28.47978162765503,
+        "products": [
+            "AEGIS X MOD 200W Color: Green Black",
+            "DRAG 4 MOD Color: Gunmetal Tropical Orange",
+            "Lunar Ice Cream 60ML F Nicotine: 3MG",
+            "VAPX METEOR 510 BOX MOD 80W Color: Volcano Red",
+            "ALEXA BOXMOD 200W Color: Blue Cyclops"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 26,
+        "elapsed_order_time": 24.50970482826233,
+        "products": [
+            "B'00ADAPT PRO",
+            "CENTAURUS Q200 MOD",
+            "ALEXA BOXMOD 200W Color: Red Devil",
+            "AREZ MOD 120W Color: Blackish Green",
+            "ORION II BY LVE Color: Textured Carbon Silver"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 27,
+        "elapsed_order_time": 17.99397325515747,
+        "products": [
+            "AEGIS X MOD 200W Color: Red Black",
+            "VCT SALTNIC 15ML Nicotine: 50MG"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 28,
+        "elapsed_order_time": 27.87220001220703,
+        "products": [
+            "ORION II BY LVE Color: Purple Heart Black",
+            "ORION II BY LVE Color: Purple Heart Silver",
+            "DRAG 4 MOD Color: Gunmetal Rosewood",
+            "ORION II BY LVE Color: Textured Carbon Silver",
+            "CARTRIDGE NEXLIM POD KIT Resistance: 1.2 Ohm"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 29,
+        "elapsed_order_time": 20.72717261314392,
+        "products": [
+            "DRAG 4 MOD Color: Black Walnut",
+            "AEGIS X MOD 200W Color: Classic Silver",
+            "ORION II BY LVE Color: Purple Heart Black"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 30,
+        "elapsed_order_time": 18.544573545455933,
+        "products": [
+            "DOTMOD DOTBOX 220W Color: Red",
+            "VAPX METEOR 510 BOX MOD 80W Color: Charcoal Black",
+            "HEXOHM V3.0 O-FRAME Color: Red"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 31,
+        "elapsed_order_time": 21.332144498825073,
+        "products": [
+            "01 OXVA NEXLIM POD KIT Color: Coral Orange",
+            "HEXOHM V3.0 ANODIZED Color: Plum",
+            "ALEXA BOXMOD 200W Color: Red Devil",
+            "ORION II BY LVE Color: Purple Heart Black"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 32,
+        "elapsed_order_time": 17.316627025604248,
+        "products": [
+            "01 OXVA NEXLIM POD KIT Color: Power Black"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 33,
+        "elapsed_order_time": 24.898959636688232,
+        "products": [
+            "HEXOHM V3.0 ANODIZED Color: Black",
+            "CENTAURUS Q200 KIT",
+            "01 OXVA NEXLIM POD KIT Color: Glory Red"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 34,
+        "elapsed_order_time": 18.27946949005127,
+        "products": [
+            "01 OXVA NEXLIM POD KIT Color: PEARL PINK"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 1,
+        "elapsed_order_time": 28.594600200653076,
+        "products": [
+            "DRAG 4 MOD Color: Black Walnut",
+            "AEGIS X MOD 200W Color: Classic Silver"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 2,
+        "elapsed_order_time": 27.70810317993164,
+        "products": [
+            "ORION II BY LVE Color: Bubinga Silver",
+            "ARGUS MT MOD",
+            "ORION II BY LVE Color: Purple Heart Black",
+            "DRAG 4 MOD Color: Gunmetal Forest Green",
+            "SALAH TRML T99 MOD ONLY Color: Creme Brulle"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 3,
+        "elapsed_order_time": 39.21970558166504,
+        "products": [
+            "AEGIS X MOD 200W Color: Stealth Black",
+            "VAPX METEOR 510 BOX MOD 80W Color: Volcano Red"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 4,
+        "elapsed_order_time": 32.68142580986023,
+        "products": [
+            "AREZ MOD 120W Color: Gunmetal",
+            "DRAG 4 MOD Color: Gunmetal Ocean Blue",
+            "ARGUS GT II MOD Color: Carbon Fiber"
+        ]
+    },
+    {
+        "user_id": 0,
+        "order_no": 5,
+        "elapsed_order_time": 53.2324059009552,
+        "products": [
+            "CENTAURUS M200 MOD Color: Man Of Steel",
+            "ALEXA BOXMOD 200W Color: Iron Metal / Grey",
+            "DRAG 4 KIT Color: Gunmetal Tropical Orange"
+        ]
+    }
+]

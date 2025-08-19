@@ -323,7 +323,7 @@ class Startwebdriver():
             return None
 
 
-    def _click_element(self, element_paths, timeout=None, record_time = False, **kwargs):
+    def _click_element(self, element_paths, timeout=None, record_time = True, **kwargs):
         """
         Attempts to locate and click on elements by automatically detecting the appropriate
         locator strategy based on the format of the element path string.
@@ -412,9 +412,9 @@ class Startwebdriver():
                         try:
                             field_text = self.save_existing_text_field(element_path)
                             if field_text:
-                                logging.info(f"✅ {field_text} Element Clicked: <Element> {element_path}\n")
+                                logging.info(f"✅ {field_text} Element Clicked: <Element> {element_path}")
                             else:
-                                logging.info(f"✅ Element Clicked with Path: {element_path}\n")
+                                logging.info(f"✅ Element Clicked with Path: {element_path}")
                         except Exception as e:
                             # logging.warning(f"Couldn't get text field info for {element_path}: {e}")
                             logging.info(f"✅ Element Clicked (but couldn't fetch text field info): {element_path}")
@@ -426,10 +426,10 @@ class Startwebdriver():
                         element.click()
 
                          # ⏱️ Record elapsed time inside log_clicks
-                        if record_time:
-                            end_time = time.time()
-                            elapsed_time = end_time - start_time
-                            logging.info(f"Element Click completed in {elapsed_time:.2f} seconds")
+                    if record_time:
+                        end_time = time.time()
+                        elapsed_time = end_time - start_time
+                        logging.info(f"Element Click completed in {elapsed_time:.2f} seconds \n")
 
                     success = True
                     return True
@@ -515,7 +515,7 @@ class Startwebdriver():
 
         return success
 
-    def _insert_text(self, element_paths, text_to_insert, timeout=None, record_time =False, **kwargs):
+    def _insert_text(self, element_paths, text_to_insert, timeout=None, record_time =True, **kwargs):
         """
         Attempts to locate and insert text into elements by automatically detecting the appropriate
         locator strategy based on the format of the element path string.
